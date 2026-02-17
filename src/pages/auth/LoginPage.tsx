@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Eye, EyeOff } from 'lucide-react';
 import AuthLayout from '../../components/auth/AuthLayout';
+import logoImg from '../../assets/images/Logo.png';
 
 const LoginPage: React.FC = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -23,11 +24,14 @@ const LoginPage: React.FC = () => {
             imageAlt="Studying on laptop"
         >
             <div className="space-y-8 animate-fade-in relative z-10">
-                <div>
-                    <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-2 transition-colors duration-500">Welcome back</h2>
-                    <p className="text-slate-500 dark:text-slate-400 font-medium transition-colors duration-500">
-                        Don't have an account? <Link to="/signup" className="text-primary hover:underline font-bold">Sign up</Link>
-                    </p>
+                <div className="flex flex-col gap-6">
+                    <img src={logoImg} alt="CourseCity" className="h-12 w-auto object-contain self-start" />
+                    <div>
+                        <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-2 transition-colors duration-500">Welcome back</h2>
+                        <p className="text-slate-500 dark:text-slate-400 font-medium transition-colors duration-500">
+                            Don't have an account? <Link to="/signup" className="text-primary hover:underline font-bold">Sign up</Link>
+                        </p>
+                    </div>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -85,8 +89,8 @@ const LoginPage: React.FC = () => {
                         <span className="font-bold text-slate-700 dark:text-slate-200">Google</span>
                     </button>
                     <button className="flex items-center justify-center gap-3 px-6 py-3.5 border border-slate-200 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-all active:scale-95">
-                        <img src="https://www.svgrepo.com/show/303108/apple-black-logo.svg" alt="Apple" className="w-5 h-5 dark:invert" />
-                        <span className="font-bold text-slate-700 dark:text-slate-200">Apple</span>
+                        <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook" className="w-5 h-5" />
+                        <span className="font-bold text-slate-700 dark:text-slate-200">Facebook</span>
                     </button>
                 </div>
             </div>

@@ -100,9 +100,9 @@ const CourseCard: React.FC<CourseCardProps> = (props) => {
                     <div className="flex flex-col items-end">
                         <div className="flex items-center gap-2">
                             {props.oldPrice && (
-                                <span className="text-sm text-slate-400 dark:text-slate-500 line-through transition-colors duration-500">${props.oldPrice}</span>
+                                <span className="text-sm text-slate-400 dark:text-slate-500 line-through transition-colors duration-500">GH₵{props.oldPrice}</span>
                             )}
-                            <span className="text-xl font-bold text-primary">${props.price}</span>
+                            <span className="text-xl font-bold text-primary">GH₵{props.price}</span>
                         </div>
                     </div>
                 </div>

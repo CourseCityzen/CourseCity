@@ -1,5 +1,5 @@
-import React from 'react';
 import { Send, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import logoImg from '../../assets/images/Logo.png';
 
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                     <div className="space-y-6">
                         <div className="flex items-center gap-2">
                             <img
-                                src="/src/assets/images/Logo.png"
+                                src={logoImg}
                                 alt="CourseCity Logo"
                                 className="h-10 w-auto object-contain"
                             />

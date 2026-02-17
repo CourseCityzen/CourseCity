@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Shield, Star, Users, GraduationCap } from 'lucide-react';
+import logoImg from '../../assets/images/Logo.png';
 
 interface AuthLayoutProps {
     children: React.ReactNode;
@@ -24,7 +25,7 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({ children, title, subtitle, imag
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2 relative z-10 w-fit">
                     <img
-                        src="/src/assets/images/Logo.png"
+                        src={logoImg}
                         alt="CourseCity Logo"
                         className="h-10 w-auto object-contain"
                     />
@@ -82,7 +83,7 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({ children, title, subtitle, imag
                 <div className="absolute top-8 left-8 lg:hidden">
                     <Link to="/" className="flex items-center gap-2">
                         <img
-                            src="/src/assets/images/Logo.png"
+                            src={logoImg}
                             alt="CourseCity Logo"
                             className="h-8 w-auto object-contain"
                         />

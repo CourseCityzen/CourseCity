@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import { Bell, Mail, Sun, Moon, LogIn, UserPlus, Menu, X, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../lib/utils';
+import logoImg from '../../assets/images/Logo.png';
 
 const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(() => {
-        return localStorage.getItem('theme') === 'dark' ||
-            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) return storedTheme === 'dark';
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
     });
 
     useEffect(() => {
@@ -50,7 +52,7 @@ const Header: React.FC = () => {
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2 group cursor-pointer">
                     <img
-                        src="/src/assets/images/Logo.png"
+                        src={logoImg}
                         alt="CourseCity Logo"
                         className="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                     />

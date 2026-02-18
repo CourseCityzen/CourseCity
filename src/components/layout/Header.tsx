@@ -90,22 +90,22 @@ const Header: React.FC = () => {
                 {/* Action Icons & Auth */}
                 <div className="flex items-center gap-2 md:gap-5">
                     <div className="flex items-center gap-1 md:gap-3">
-                        <button className="p-2.5 text-primary hover:text-primary-dark bg-primary/10 hover:bg-primary/20 rounded-full transition-all duration-300 relative group">
+                        <button className="p-2.5 text-red-500 hover:text-red-600 bg-red-500/10 hover:bg-red-500/20 rounded-full transition-all duration-300 relative group">
                             <ShoppingCart className="w-5 h-5 transition-transform group-hover:scale-110" />
-                            <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white shadow-sm">
+                            <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white shadow-sm">
                                 0
                             </span>
                         </button>
-                        <button className="p-2.5 text-primary hover:text-primary-dark bg-primary/10 hover:bg-primary/20 rounded-full transition-all duration-300 relative group">
+                        <button className="p-2.5 text-yellow-500 hover:text-yellow-600 bg-yellow-500/10 hover:bg-yellow-500/20 rounded-full transition-all duration-300 relative group">
                             <Bell className="w-5 h-5 transition-transform group-hover:scale-110" />
                             <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white ring-red-200 ring-2 pulse shadow-sm" />
                         </button>
-                        <button className="p-2.5 text-primary hover:text-primary-dark bg-primary/10 hover:bg-primary/20 rounded-full transition-all duration-300 group">
+                        <button className="p-2.5 text-green-500 hover:text-green-600 bg-green-500/10 hover:bg-green-500/20 rounded-full transition-all duration-300 group">
                             <Mail className="w-5 h-5 transition-transform group-hover:scale-110" />
                         </button>
                         <button
                             onClick={toggleTheme}
-                            className="p-2.5 text-primary hover:text-primary-dark bg-primary/10 hover:bg-primary/20 rounded-full transition-all duration-300 group"
+                            className="p-2.5 text-purple-500 hover:text-purple-600 bg-purple-500/10 hover:bg-purple-500/20 rounded-full transition-all duration-300 group"
                         >
                             {theme === 'light' && <Moon className="w-5 h-5 transition-transform group-hover:-rotate-12" />}
                             {theme === 'dark' && <Waves className="w-5 h-5 transition-transform group-hover:scale-110" />}

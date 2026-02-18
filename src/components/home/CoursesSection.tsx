@@ -98,10 +98,10 @@ const CoursesSection: React.FC = () => {
     return (
         <section className="max-w-7xl mx-auto px-4 md:px-8 py-20 bg-[#FDFCFB] dark:bg-slate-950 navy:bg-[#020D1A] transition-colors duration-500">
             <div className="text-center mb-16 space-y-4">
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white navy:text-indigo-50">
                     All <span className="text-primary italic">Courses</span> of CourseCity
                 </h2>
-                <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
+                <p className="text-slate-500 dark:text-slate-400 navy:text-indigo-300/70 max-w-2xl mx-auto">
                     Choose from over 100,000 online video courses with new additions published every month.
                 </p>
 
@@ -110,7 +110,7 @@ const CoursesSection: React.FC = () => {
                     <input
                         type="text"
                         placeholder="Search your favorite course..."
-                        className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full py-4 pl-12 pr-6 focus:ring-2 focus:ring-primary outline-none transition-all shadow-sm text-slate-900 dark:text-white"
+                        className="w-full bg-slate-50 dark:bg-slate-900 navy:bg-[#051933] border border-slate-200 dark:border-slate-800 navy:border-indigo-900/50 rounded-full py-4 pl-12 pr-6 focus:ring-2 focus:ring-primary outline-none transition-all shadow-sm text-slate-900 dark:text-white navy:text-indigo-50 placeholder:navy:text-indigo-300/40"
                     />
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-primary text-white rounded-full">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
@@ -128,7 +128,7 @@ const CoursesSection: React.FC = () => {
                             "px-6 py-2.5 rounded-full font-semibold transition-all duration-300 border-2",
                             activeCategory === cat
                                 ? "bg-primary border-primary text-white shadow-lg"
-                                : "bg-white dark:bg-slate-900 border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary"
+                                : "bg-white dark:bg-slate-900 navy:bg-[#051933] border-slate-100 dark:border-slate-800 navy:border-indigo-900/30 text-slate-600 dark:text-slate-400 navy:text-indigo-300/70 hover:border-primary hover:text-primary"
                         )}
                     >
                         {cat}

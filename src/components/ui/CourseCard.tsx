@@ -35,7 +35,7 @@ const CourseCard: React.FC<CourseCardProps> = (props) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="group card-premium h-full flex flex-col bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 transition-colors duration-500"
+            className="group card-premium h-full flex flex-col bg-white dark:bg-slate-900 navy:bg-[#051933] border border-slate-100 dark:border-slate-800 navy:border-indigo-900/30 transition-colors duration-500"
         >
             {/* Thumbnail */}
             <div className="relative aspect-video overflow-hidden">
@@ -56,7 +56,7 @@ const CourseCard: React.FC<CourseCardProps> = (props) => {
                 </div>
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-black/20 dark:bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <button className="bg-white dark:bg-slate-900 text-primary font-bold px-6 py-2.5 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-xl border dark:border-slate-700">
+                    <button className="bg-white dark:bg-slate-900 navy:bg-indigo-950 text-primary font-bold px-6 py-2.5 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-xl border dark:border-slate-700 navy:border-indigo-800">
                         Quick View
                     </button>
                 </div>
@@ -70,7 +70,7 @@ const CourseCard: React.FC<CourseCardProps> = (props) => {
                     <span className="text-sm font-medium text-slate-600 dark:text-slate-400 transition-colors duration-500">{props.instructor}</span>
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors line-clamp-2 duration-500">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white navy:text-indigo-50 mb-3 group-hover:text-primary transition-colors line-clamp-2 duration-500">
                     {props.title}
                 </h3>
 
@@ -94,7 +94,7 @@ const CourseCard: React.FC<CourseCardProps> = (props) => {
                                 <Star key={i} className={cn("w-3.5 h-3.5", i < Math.floor(props.rating) ? "fill-current" : "")} />
                             ))}
                         </div>
-                        <span className="text-sm font-bold text-slate-900 dark:text-white transition-colors duration-500">{props.rating}</span>
+                        <span className="text-sm font-bold text-slate-900 dark:text-white navy:text-indigo-50 transition-colors duration-500">{props.rating}</span>
                         <span className="text-xs text-slate-400 dark:text-slate-500 transition-colors duration-500">({props.reviews})</span>
                     </div>
                     <div className="flex flex-col items-end">

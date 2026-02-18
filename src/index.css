@@ -1,9 +1,10 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-poppins: "Poppins", sans-serif;
-  --dark-mode: selector;
 
   --color-primary: #FF6B00;
   --color-primary-light: #FF8533;
